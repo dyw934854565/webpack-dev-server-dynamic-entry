@@ -41,7 +41,11 @@ exports = module.exports = function webpackDevServerDynamicEntry(entry, options 
         if (compiledEntry[name] || !entryPath) return
         compiledEntry[name] = entryPath
         return new Promise(resolve => {
-          server.invalidate(resolve)
+          if (server.invalidate.length) { // 旧版invalidate不支持回调
+            server.invalidate(resolve)
+          } else if (server.middleware) {
+            server.middleware.invalidate(resolve)
+          }
         })
       }
       app.use(async function (req, res, next) {
