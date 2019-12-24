@@ -27,7 +27,7 @@ module.exports = {
 目前只支持ensuePage
 
 ## ensuePage
-有默认值, 如下。在接收每个请求都会调用ensuePage，在匹配中路由后可以调用addEntry
+有默认值, 如下。每个请求ensuePage都会被调用，在ensuePage中用path去和入口匹配，匹配中了可以调用addEntry，把入口加到webpack中编译
 ```javascript
 (async function ensuePage (req, res, addEntry, allEntry) {
     if (req.path === '/') {

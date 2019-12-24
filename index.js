@@ -7,7 +7,8 @@
  */
 const ensuePage = (async (req, res, addEntry, allEntry) => {
   if (req.path === '/') {
-    return addEntry('main')
+    if (allEntry['main']) return addEntry('main')
+    if (allEntry['index']) return addEntry('index')
   }
   const paths = Object.keys(allEntry)
   for (let i = 0; i <= paths.length; i++) {

@@ -1,6 +1,6 @@
 {
   "name": "webpack-dev-server-dynamic-entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "use dynamic entry to speed ​​up compilation for multiple entry in webpack",
   "main": "index.js",
   "scripts": {
