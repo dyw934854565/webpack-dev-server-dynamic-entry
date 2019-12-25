@@ -1,11 +1,12 @@
 {
   "name": "webpack-dev-server-dynamic-entry",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "use dynamic entry to speed ​​up compilation for multiple entry in webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": ["index.js"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dyw934854565/webpack-dev-server-dynamic-entry.git"
